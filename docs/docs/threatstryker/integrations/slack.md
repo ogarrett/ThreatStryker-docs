@@ -2,6 +2,8 @@
 title: Slack
 ---
 
+# Slack
+
 *Forward Notifications to Slack Channels*
 
 Navigate to `https://[Your Workspace].slack.com/apps` and search for the "Incoming Webhooks" app from Slack.

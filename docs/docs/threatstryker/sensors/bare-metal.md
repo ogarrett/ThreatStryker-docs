@@ -2,6 +2,8 @@
 title: Bare-Metal or VM
 ---
 
+# Bare-Metal or VM
+
 *Deployed on a Docker runtime*
 
 

@@ -2,6 +2,8 @@
 title: Kubernetes
 ---
 
+# Kubernetes
+
 *Deployed as a daemonset in a Kubernetes Cluster, using a helm chart*
 
 In a Kubernetes environment, sensors are deployed as a **DaemonSet** on the Kubernetes cluster, using a helm chart.

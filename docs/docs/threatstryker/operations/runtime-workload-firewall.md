@@ -2,6 +2,8 @@
 title: Workload Firewall
 ---
 
+# Runtime Workload Firewall
+
 *Define Access Control Policies for Workloads*
 
 You can define workload specific allow-lists or deny-lists per workload at runtime using UI or by using runtime APIs. Deepfence currently supports addition of policies for containers, pods as well as virtual machines.

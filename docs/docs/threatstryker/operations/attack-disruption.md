@@ -2,6 +2,8 @@
 title: Attack Disruption
 ---
 
+# Multi-Stage Attack Disruption
+
 *MultiStage, Wide-Area Attack Disruption*
 
 ThreatStryker helps you detect multiple stages of an attack and provides protection policies to disrupt those attacks at various stages.

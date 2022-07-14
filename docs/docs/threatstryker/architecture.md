@@ -2,11 +2,9 @@
 title: ThreatStryker Components
 ---
 
-
-
 # ThreatStryker Components
 
-![Deepfence ThreatStryker Components](../img/deepfence_architecture.jpg)
+![Deepfence ThreatStryker Components](img/deepfence_architecture.jpg)
 
 ## ThreatStryker Management Console
 

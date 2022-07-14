@@ -2,6 +2,8 @@
 title: Installing ThreatMapper Sensors
 ---
 
+# Installing ThreatMapper Sensors
+
 Your production workloads are monitored and scanned using ThreatStryker Sensors. The ThreatStryker Sensors are implemented as lightweight containers which monitor activity, discover workloads and retrieve manifests. They are deployed on your production infrastructure, and  communicate with the ThreatStryker Management Console over TLS, using the URL and API key.
 
 A single ThreatStryker Console can manage multiple workload types, and on-premise and cloud deployments simultaneously.

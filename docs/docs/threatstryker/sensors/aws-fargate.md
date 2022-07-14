@@ -2,6 +2,8 @@
 title: Amazon Fargate
 ---
 
+# Amazon Fargate
+
 *Deployed as a sidecar container using a task definition*
 
 In Amazon fargate, the ThreatStryker agents are deployed as a sidecar container using a task definition. 

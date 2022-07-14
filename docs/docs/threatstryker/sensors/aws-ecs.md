@@ -2,6 +2,8 @@
 title: Amazon ECS
 ---
 
+# Amazon ECS
+
 *Deployed as a daemon service using a task definition*
 
 In Amazon ECS, the ThreatStryker sensors are deployed as a daemon service using task definition.

@@ -2,6 +2,8 @@
 title: Sumo Logic
 ---
 
+# Sumo-Logic
+
 *Collect Events and Activity Logs*
 
 You can forward ThreatStryker Events and ThreatStryker Activity Logs to Sumo Logic.

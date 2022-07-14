@@ -2,6 +2,8 @@
 title: Compliance
 ---
 
+# Runtime Compliance
+
 *Check runtime for compliance*
 
 From the topology view, runtime compliance scanning for running containers & hosts can be initiated using the console dashboard, or by using APIs. Here is snapshot of runtime compliance scan on a host node.

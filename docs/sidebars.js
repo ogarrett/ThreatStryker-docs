@@ -22,47 +22,29 @@ const sidebars = {
     },    
 
     'threatstryker/index',
+    'threatstryker/architecture',
+    'threatstryker/deploy',
 
     {
       type: 'category',
-      label: 'Introduction to ThreatStryker',
-      link: {
-        type: 'doc',
-        id: 'threatstryker/Introduction/index'
-      },
-      collapsed: false,
+      label: 'Deepfence Cloud',
       items: [
-        'threatstryker/Introduction/deploy',
-        'threatstryker/Introduction/components',
+        'threatstryker/cloud/index',
+        'threatstryker/cloud/users',
+        'threatstryker/cloud/consoles',
+        'threatstryker/cloud/agents',
       ],
     },
 
     {
       type: 'category',
-      label: 'Deploying in Deepfence Cloud',
-      link: {
-        type: 'doc',
-        id: 'threatstryker/Cloud/index'
-      },
+      label: 'Self-Hosted',
       items: [
-        'threatstryker/Cloud/users',
-        'threatstryker/Cloud/consoles',
-        'threatstryker/Cloud/agents',
-      ],
-    },
-
-    {
-      type: 'category',
-      label: 'Deploying with Self-Install',
-      link: {
-        type: 'doc',
-        id: 'threatstryker/Self-Install/index'
-      },
-      items: [
-        'threatstryker/Self-Install/console',
-        'threatstryker/Self-Install/users',
-        'threatstryker/Self-Install/aws-elb',
-        'threatstryker/Self-Install/troubleshooting',
+        'threatstryker/selfhosted/index',
+        'threatstryker/selfhosted/console',
+        'threatstryker/selfhosted/users',
+        'threatstryker/selfhosted/aws-elb',
+        'threatstryker/selfhosted/troubleshooting',
       ],
     },
  
@@ -71,14 +53,14 @@ const sidebars = {
       label: 'Sensor Agents',
       link: {
         type: 'doc',
-        id: 'threatstryker/Sensors/index'
+        id: 'threatstryker/sensors/index'
       },
       items: [
-        'threatstryker/Sensors/kubernetes',
-        'threatstryker/Sensors/docker',
-        'threatstryker/Sensors/aws-ecs',
-        'threatstryker/Sensors/aws-fargate',
-        'threatstryker/Sensors/bare-metal',
+        'threatstryker/sensors/kubernetes',
+        'threatstryker/sensors/docker',
+        'threatstryker/sensors/aws-ecs',
+        'threatstryker/sensors/aws-fargate',
+        'threatstryker/sensors/bare-metal',
       ],
     },
 
@@ -87,20 +69,20 @@ const sidebars = {
       label: 'Operations',
       link: {
         type: 'doc',
-        id: 'threatstryker/Operations/index'
+        id: 'threatstryker/operations/index'
       },
       items: [
-        'threatstryker/Operations/visualization',
-        'threatstryker/Operations/vulnerability-management',
-        'threatstryker/Operations/registry-scanning',
-        'threatstryker/Operations/runtime-compliance',
-        'threatstryker/Operations/runtime-workload-firewall',
-        'threatstryker/Operations/east-west-dpi',
-        'threatstryker/Operations/runtime-integrity',
-        'threatstryker/Operations/attack-disruption',
-        'threatstryker/Operations/report-generation',
-        'threatstryker/Operations/ci-cd',
-        'threatstryker/Operations/notifications',
+        'threatstryker/operations/visualization',
+        'threatstryker/operations/vulnerability-management',
+        'threatstryker/operations/registry-scanning',
+        'threatstryker/operations/runtime-compliance',
+        'threatstryker/operations/runtime-workload-firewall',
+        'threatstryker/operations/east-west-dpi',
+        'threatstryker/operations/runtime-integrity',
+        'threatstryker/operations/attack-disruption',
+        'threatstryker/operations/report-generation',
+        'threatstryker/operations/ci-cd',
+        'threatstryker/operations/notifications',
       ],
     },
 
@@ -109,12 +91,12 @@ const sidebars = {
       label: 'Integrations',
       link: {
         type: 'doc',
-        id: 'threatstryker/Integrations/index'
+        id: 'threatstryker/integrations/index'
       },
       items: [
-        'threatstryker/Integrations/slack',
-        'threatstryker/Integrations/sumo-logic',
-        'threatstryker/Integrations/terraform',
+        'threatstryker/integrations/slack',
+        'threatstryker/integrations/sumo-logic',
+        'threatstryker/integrations/terraform',
        ],
     },
     "threatstryker/api-reference",

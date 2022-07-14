@@ -2,9 +2,9 @@
 title: Notifications
 ---
 
+# Norifications
+
 *Forward Notifications to External Services*
-
-
 
 ThreatStryker logs and scanning reports can be routed to various SIEMs and notifications channels. Configure the routing from the Notifications screen.
 
