@@ -22,7 +22,7 @@ terraform init
 
 Create a new file terraform.tfvars with following values:
 
-```
+```bash
 ssh_private_key = "~/deepfence/deepfence_console.pem"
 ssh_public_key = "~/deepfence/deepfence_console_public.pem"
 gcp_project_id = "deepfence-console-123456"
@@ -31,12 +31,12 @@ gcp_service_account_json = "~/deepfence/terraform-123456-458c1e0fce03.json"
 
  * Setup a service account in GCP: https://cloud.google.com/docs/authentication/getting-started#cloud-console
  * This service account should have permissions to create vm
- * GCP zone is set as us-west1-a. Please change it if needed in `vars.tf`
+ * The GCP zone is set to `us-west1-a`. Please change it if needed in `vars.tf`
 
 ## Create Deepfence Management Console VM
 
 Create the deepfence management console VM:
 
-```
+```bash
 terraform apply
 ```

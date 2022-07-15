@@ -1,8 +1,8 @@
 ---
-title: Deploying with Self-Install
+title: Deploying with Self-Managed
 ---
 
-# Deploying with Self-Install
+# Deploying with Self-Managed
 
 Deployment Architecture
 =======================

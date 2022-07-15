@@ -23,28 +23,36 @@ const sidebars = {
 
     'threatstryker/index',
     'threatstryker/architecture',
-    'threatstryker/deploy',
 
     {
       type: 'category',
-      label: 'Deepfence Cloud',
+      label: 'Management Console',
+       link: {
+        type: 'doc',
+        id: 'threatstryker/deploy'
+      },
       items: [
-        'threatstryker/cloud/index',
-        'threatstryker/cloud/users',
-        'threatstryker/cloud/consoles',
-        'threatstryker/cloud/agents',
-      ],
-    },
-
-    {
-      type: 'category',
-      label: 'Self-Hosted',
-      items: [
-        'threatstryker/selfhosted/index',
-        'threatstryker/selfhosted/console',
-        'threatstryker/selfhosted/users',
-        'threatstryker/selfhosted/aws-elb',
-        'threatstryker/selfhosted/troubleshooting',
+        {
+          type: 'category',
+          label: 'Deepfence Cloud',
+          items: [
+            'threatstryker/cloud/index',
+            'threatstryker/cloud/users',
+            'threatstryker/cloud/consoles',
+            'threatstryker/cloud/agents',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Self-Managed',
+          items: [
+            'threatstryker/selfmanaged/index',
+            'threatstryker/selfmanaged/console',
+            'threatstryker/selfmanaged/users',
+            'threatstryker/selfmanaged/aws-elb',
+            'threatstryker/selfmanaged/troubleshooting',
+          ],
+        },
       ],
     },
  

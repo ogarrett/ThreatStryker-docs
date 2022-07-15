@@ -19,7 +19,7 @@ The system requirements for the ThreatStryker Management Console are as follows:
 
 ## Preparation
 
-Download and extract the Deepfence Deployment Kit, and make a note of the license key from
+Download and extract the Deepfence Deployment Kit (link provided by email), and make a note of the license key from
 the license email shared with you. It should be on the following lines.
 
 | Property | Details |
@@ -55,7 +55,7 @@ The host or VM to be used for the Deepfence management console needs to have the
 
 1. Go to the directory **installation_scripts/docker_linux/deepfence_console**.  To authenticate to the docker image repository, run the following command:
 
-   ```
+   ```bash
    docker login quay.io
    ```
 
@@ -65,7 +65,7 @@ The host or VM to be used for the Deepfence management console needs to have the
 
 1.  Run docker-compose file in that directory as follows:
 
-   ```
+   ```bash
    docker-compose -f docker-compose.yml up -d
    ```
 
@@ -76,7 +76,7 @@ Helm Chart Install
 
 1. Add helm repo:
 
-   ```
+   ```bash
    helm repo add deepfence https://deepfence-helm-charts.s3.amazonaws.com/enterprise
    helm repo update
    helm search repo deepfence/deepfence-console
@@ -84,7 +84,7 @@ Helm Chart Install
 
 1. Run following command:
 
-   ```
+   ```bash
    helm install deepfence-router deepfence/deepfence-router
    helm install deepfence-console deepfence/deepfence-console \
        --set registry.username=<deepfence_username> \
@@ -94,20 +94,20 @@ Helm Chart Install
 
    The Quay username and password is provided by email. Check the README inside the package for detailed setup instructions.
 
-   ```
+   ```bash
    helm show readme deepfence/deepfence-console
    helm show values deepfence/deepfence-console
    ```
 
 1.  To get the management console ip address, run following command: ::
 
-   ```
+   ```bash
    kubectl get --namespace default svc deepfence-router -w
    ```
 
 1.  To delete deepfence console helm chart, run following command: ::
 
-   ```
+   ```bash
    helm delete deepfence-router
    helm delete deepfence-console
    ```

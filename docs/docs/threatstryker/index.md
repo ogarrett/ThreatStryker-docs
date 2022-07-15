@@ -13,9 +13,9 @@ Modern applications are highly distributed and dynamic, often running as contain
 1. Identifying the presence of attack behavior and neutralizing attacks before they result in compromise of your applications
 
 
-![Discover and Scan Workloads and Hosts](img/intro-1.png)
-![Gather Attack Intel from Workloads and Network](img/intro-2.png)
-![Protect Applications from Exploit and Spread](img/intro-3.png)
+| ![Discover and Scan Workloads and Hosts](img/intro-1.png) | ![Gather Attack Intel from Workloads and Network](img/intro-2.png) | ![Protect Applications from Exploit and Spread](img/intro-3.png) |
+| :--: | :--: | :--: |
+| *Discover and Scan Workloads and Hosts* | *Gather Attack Intel from Workloads and Network* | *Protect Applications from Exploit and Spread* |
 
 
 ThreatStryker supports applications running in cloud-native platforms (kubernetes, serverless, docker) and virtual machines/bare metal, across multiple clouds and on-prem locations.

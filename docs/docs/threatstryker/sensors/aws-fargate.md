@@ -40,15 +40,17 @@ The ThreatStryker management console is installed separately outside of the farg
 
 Click Create new Task Definition and select fargate as launch type and then go to *Next step*.
 
-![New Fargate Task](../img/newtask_fargate.jpg)
-<p align="center"><i>New Fargate Task</i></p>
+| ![New Fargate Task](../img/newtask_fargate.jpg) |
+| :--: |
+| *New Fargate Task *|
 
 ### Set Task Parameters
 
 Edit the *Task Definition Name*, *Task Role* and *Task Execution Role etc*. as required. For the *Task Role* and *Task Execution Role*, you have to use the role created in *IAM role creation step* earlier. Specify *Task memory* and *Task CPU* according to your Requirements.
 
-![Update task definition and create agent container](../img/task_fargate.jpg)
-<p align="center"><i>Update task definition and create agent container</i></p>
+| ![Update task definition and create agent container](../img/task_fargate.jpg) |
+| :--: |
+| *Update task definition and create agent container* |
 
 
 
@@ -62,8 +64,9 @@ You need to note down the name of the agent container (*FargateAgentSidecarScrat
 
 Finally, click the *Add* button to create the deepfence agent container:
 
-![Create the Agent Container inside the Task Definition](../img/editcontainer_fargate.jpg)
-<p align="center"><i>Create the Agent Container inside the Task Definition</i></p>
+| ![Create the Agent Container inside the Task Definition](../img/editcontainer_fargate.jpg) |
+| :--: |
+| *Create the Agent Container inside the Task Definition* |
 
 
 ### Add the Container to your Application
@@ -79,13 +82,14 @@ The following environment variables are required for the ThreatStryker agent:
  * **DF_BACKEND_IP**: IP address of Management Console
  * **DF_SERVERLESS**: Set to *true* for serverless instances
 
-![Configuring Environment Variables for Fargate Application Container](../img/envvariables_fargate.jpg)
-<p align="center"><i>Configuring Environment Variables for Fargate Application Container</i></p>
+| ![Configuring Environment Variables for Fargate Application Container](../img/envvariables_fargate.jpg) |
+| :--: |
+| *Configuring Environment Variables for Fargate Application Container* |
 
  
 If you are using json to configure your task definitions, you can use the following part in the appropriate container section of task definition json after copying the appropriate IP address and API Key.
 
-```
+```json
 environment": [
    {
        "name": "DEEPFENCE_KEY",
@@ -130,12 +134,13 @@ environment": [
 
 In the application container, update storage to allow read/write from deepfence agent volume by specifying the agent container name in *volumes from*. Leave the *Read only* button **unchecked** as shown below.
 
-![Configure VolumesFrom Setting](../img/configurevolumes_fargate.jpg)
-<p align="center"><i>Configure VolumesFrom Setting</i></p>
+| ![Configure VolumesFrom Setting](../img/configurevolumes_fargate.jpg) |
+| :--: |
+| *Configure VolumesFrom Setting* |
 
 If you are using json to configure your task definitions, you can copy the following settings to the appropriate container section of the json after changing the Container name:
 
-```
+```json
 "volumesFrom": [
    {
        "sourceContainer": "FargateAgentSidecarScratch",
@@ -156,7 +161,7 @@ The first option requires that you can change the application container image. B
 
 Note that the fargate instance will stop if any of the essential containers exit, so the user application container has to be written accordingly.
 
-```
+```bash
 #!/bin/bash -x
 
 echo "Start Deepfence services... Console is $DF_BACKEND_IP"
@@ -181,13 +186,14 @@ The second option does not require any change in the application container. You 
 
 **Change the Entrypoint**: For this, you need to provide the ThreatStryker entrypoint and the Application entrypoint and arguments, as a comma delimited list in the **Entry point** field:
 
-![Invoking agent by changing the Entrypoint](../img/invokingagents_fargate.jpg)
-<p align="center"><i>Method (2a): Invoking agent by changing the Entrypoint</i></p>
+| ![Invoking agent by changing the Entrypoint](../img/invokingagents_fargate.jpg) |
+| :--: |
+| *Method (2a): Invoking agent by changing the Entrypoint* |
 
 
 If you are using json to configure your task definitions, then you can specify the entrypoint and/or command as follows using appropriate quoting:
 
-```
+```json
 "entryPoint": [
    "/deepfence/usr/local/bin/deepfence-entry-point-scratch.sh",
    "customer-entry-point.sh.sh",
@@ -198,13 +204,14 @@ If you are using json to configure your task definitions, then you can specify t
 
 **Change the Entrypoint and Command**: Alternatively, you can provide the ThreatStryker entrypoint in the **Entry point** field and the Application entrypoint and arguments in the **Command** field as shown below:
 
-![Invoking agent by changing the Entrypoint and Command field](../img/invokingagentscommandfield_fargate.jpg)
-<p align="center"><i>Method (2b): Invoking agent by changing the Entrypoint and Command field</i></p>
+| ![Invoking agent by changing the Entrypoint and Command field](../img/invokingagentscommandfield_fargate.jpg) |
+| :--: |
+| *Method (2b): Invoking agent by changing the Entrypoint and Command field* |
 
 
 If you are using json to configure your task definitions, then you can specify the entrypoint and/or command as follows using appropriate quoting:
 
-```
+```json
 "entryPoint": [
    "/deepfence/usr/local/bin/deepfence-entry-point-scratch.sh"
 ],
@@ -222,15 +229,17 @@ After creating your updated application containers and the task definitions, you
 
 You can launch your fargate instance by clicking *Run task* in the actions dropdown of the task definition. Otherwise, you can click “Run New Task” button in “Tasks” tab of your cluster:
 
-![Deploying fargate instance on your cluster](../img/clustertest_fargate.jpg)
-<p align="center"><i>Deploying fargate instance on your cluster</i></p>
+| ![Deploying fargate instance on your cluster](../img/clustertest_fargate.jpg) |
+| :--: |
+| *Deploying fargate instance on your cluster* |
 
 
 
 Select *Fargate* as the launch type and choose appropriate task definition, cluster, number of tasks, VPC and security groups before launching the task. Fargate agents should be able to access ports 8000–8010 on console, so users need to make sure that security groups allow these outbound connections and other connections as needed.
 
-![Run the fargate task on your cluster](../img/runtask_fargate.jpg)
-<p align="center"><i>Run the fargate task on your cluster</i></p>
+| ![Run the fargate task on your cluster](../img/runtask_fargate.jpg) |
+| :--: |
+| *Run the fargate task on your cluster* |
 
 
 Finally, click the “Run Task” button.

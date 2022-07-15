@@ -19,7 +19,7 @@ The host or VM to be used for the Deepfence agents needs to have the docker runt
 1.  Download the following script: [start-agent.sh 🔗](../files/3.6.0/start-agent.sh) 
 1.  To authenticate to the docker image repository, run the following command:
 
-	```
+	```bash
 	docker login quay.io
 	```
 
@@ -27,7 +27,7 @@ The host or VM to be used for the Deepfence agents needs to have the docker runt
 
 1.  Run the script in that directory as follows:
 
-	```
+	```bash
 	bash start-agent.sh -r <IP_ADDRESS_OF_UI_MACHINE> -k xxxxxxxx
 	```
 
@@ -53,7 +53,7 @@ Installation Steps
 
 1.  To start the ThreatStryker agent, if the IP address of the VM or host that has the ThreatStryker management console is 192.168.1.10, use the following command:
 
-    ```
+    ```bash
     /run-deepfence.ps1 -r 192.168.1.10 -cve_scan_dir "C:\Program Files"
     ```
 
@@ -73,7 +73,7 @@ If ThreatStryker management console is accessed through a proxy server, add the 
 
 Edit the file: `~/.docker/config.json`, and add the following content.  Remember to change the proxy server ip address from 111.111.111.111 to your proxy server ip:
 
-```
+```json
 {
     "auths": {
         "https://index.docker.io/v1/": {
@@ -95,7 +95,7 @@ Edit the file: `~/.docker/config.json`, and add the following content.  Remember
 
 Restart the docker daemon:
 
-```
+```bash
 sudo systemctl restart docker
 ```
 
